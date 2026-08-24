@@ -1,0 +1,11 @@
+langchain==0.3.27
+langchain-core==0.3.86
+langchain-community==0.3.31
+langchain-huggingface==0.3.1
+langchain-google-genai==2.1.12
+langchain-text-splitters==0.3.11
+langsmith
+faiss-cpu
+sentence-transformers
+beautifulsoup4
+python-dotenv
