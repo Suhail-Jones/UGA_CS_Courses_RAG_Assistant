@@ -7,6 +7,7 @@ load_dotenv()
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from bs4 import BeautifulSoup
+from langchain_community.vectorstores import FAISS
 
 
 headers = {
@@ -15,15 +16,14 @@ headers = {
 
 INDEX_DIR = "faiss_index"
 
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embeddingModel = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
+#If the index directory exists, load the existing FAISS index. Otherwise, build a new index from scratch.
 if os.path.isdir(INDEX_DIR) and os.listdir(INDEX_DIR):
     print(f"Found existing index at '{INDEX_DIR}/' — loading instead of rebuilding.")
-    # TODO: load the FAISS index from disk using `embeddings`
-    vectorstore = None
+    vectorstore = FAISS.load_local(INDEX_DIR, embeddingModel, allow_dangerous_deserialization=True)
 else:
     print(f"No index found at '{INDEX_DIR}/' — building from scratch.")
-    # TODO: load sources.txt + the 5 extra pages, chunk, embed, build the FAISS index
     
     initialSources = [
         "https://bulletin.uga.edu/Program/Details/73962",
@@ -51,13 +51,15 @@ else:
         response = requests.get(src, timeout=20, headers=headers)
         docs.append(Document(page_content=extract_text(response.text), metadata={"source": src}))
     print(f"Loaded {len(docs)} docs.")
-    
+
     #Splits the doc list into smaller chunks of 1000 characters
     textSplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     all_splits = textSplitter.split_documents(docs)
     print(f'Split sources into {len(all_splits)} chunks.')
 
-    vectorstore = None
-    # TODO: save it with vectorstore.save_local(INDEX_DIR)
+    #Embeds the chunks and builds the FAISS vector store
+    vectorstore = FAISS.from_documents(all_splits, embeddingModel)
+    print(f'Added {len(all_splits)} vectors to the FAISS index.')
 
-# vectorstore is now ready to use either way
+    vectorstore.save_local(INDEX_DIR)
+    print(f"Saved index to '{INDEX_DIR}/'.")
