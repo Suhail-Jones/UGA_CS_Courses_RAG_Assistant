@@ -216,5 +216,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-faiss_index/ 
-course_urls.txt
+faiss_index/
+sources.txt
