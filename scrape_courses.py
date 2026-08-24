@@ -24,8 +24,8 @@ for link in links:
         fullURL = urljoin(baseURL, link['href'])
         sources.add(fullURL)
 
-with open('sources.txt', 'a') as file:
+with open('sources.txt', 'w') as file:
     for url in sorted(sources):
-        file.write(f"{fullURL}\n")
+        file.write(f"{url}\n")
 print(len(sources))
 
