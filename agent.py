@@ -10,7 +10,3 @@ backend = StateBackend
 
 @tool(parse_docstring = True)
 def search_documentation(query):
-"""
-
-
-"""

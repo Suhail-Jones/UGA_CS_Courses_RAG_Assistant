@@ -63,3 +63,7 @@ else:
 
     vectorstore.save_local(INDEX_DIR)
     print(f"Saved index to '{INDEX_DIR}/'.")
+
+for chunk in vectorstore.similarity_search("Do computer science majors need to take spanish?", k=5):
+    print(repr(chunk.page_content[:500]), "...")
+    print("---")
