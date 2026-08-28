@@ -21,7 +21,7 @@ embeddingModel = HuggingFaceEmbeddings(model_name="sentence-transformers/all-Min
 #If the index directory exists, load the existing FAISS index. Otherwise, build a new index from scratch.
 if os.path.isdir(INDEX_DIR) and os.listdir(INDEX_DIR):
     print(f"Found existing index at '{INDEX_DIR}/' — loading instead of rebuilding.")
-    vectorstore = FAISS.load_local(INDEX_DIR, embeddingModel, allow_dangerous_deserialization=True)
+    #vectorstore = FAISS.load_local(INDEX_DIR, embeddingModel, allow_dangerous_deserialization=True)
 else:
     print(f"No index found at '{INDEX_DIR}/' — building from scratch.")
     
@@ -64,6 +64,3 @@ else:
     vectorstore.save_local(INDEX_DIR)
     print(f"Saved index to '{INDEX_DIR}/'.")
 
-for chunk in vectorstore.similarity_search("Do computer science majors need to take spanish?", k=5):
-    print(repr(chunk.page_content[:500]), "...")
-    print("---")
