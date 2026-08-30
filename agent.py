@@ -1,4 +1,6 @@
 from dotenv import load_dotenv
+load_dotenv()
+
 import os
 
 import uuid
@@ -9,6 +11,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.agents.middleware.todo import TodoListMiddleware
 from langchain.chat_models import init_chat_model
+from langchain_core.messages import HumanMessage
 
 
 
@@ -31,7 +34,7 @@ def search_documentation(query: str) -> str:
         Filepaths where retrieved chunks were saved under /retrieved/.
     """
 
-    retrievedDocs = vectorStore.similarity_search(query=query, k=8)
+    retrievedDocs = vectorStore.similarity_search(query=query, k=6)
     batch_id = uuid.uuid4().hex[:8]
     uploads = []
     savedPaths = []
@@ -45,7 +48,7 @@ def search_documentation(query: str) -> str:
         uploads.append((path, content.encode("utf-8")))
         savedPaths.append(path)
 
-        backend.upload_files(uploads)
+    backend.upload_files(uploads)
     return (
         f"Saved {len(savedPaths)} Computer Science information chunks;\n" + "\n".join(savedPaths)
     )
@@ -54,7 +57,7 @@ RAG_WORKFLOW_INSTRUCTIONS = """# UGA CS courses Q&A workflow
 
 Answer questions about UGA's Computer Science (CS) program using the indexed collection of text.
 
-1. **Plan**: Use write_todos() to break complex questions into specific search queries.
+1. **Plan**: Use write_todos to break complex questions into specific search queries.
 2. **Search**: Call search_documentation with a query. The tool saves matching chunks under /retrieved/ and returns file paths.
 3. **Analyze**: Delegate each chunk file to the chunk-analyst subagent with task(). Include the user question and one file path per task(). Launch multiple task() calls in parallel when you retrieve several chunks.
 4. **Synthesize**: Combine subagent summaries into a final answer with inline links to the relavent sources.
@@ -62,7 +65,7 @@ Answer questions about UGA's Computer Science (CS) program using the indexed col
 
 ## Specific delegation instructions:
 - After search_documentation returns file paths, delegate one chunk-analyst task per file path.
-- Launch up to 4 parallel task() calls per iteration.
+- Launch up to 3 parallel task() calls per iteration.
 - Do not paste the full chunk contents into your messages. Let the subagents read files.
 
 ## Specific synthesis instructions:
@@ -78,7 +81,7 @@ CHUNK_ANALYST_INSTRUCTIONS = """You analyze retrieved UGA Computer Science Degre
 
 Your task description includes the user's question and one file path under /retrieved/.
 
-Use read_file() to read the assigned chunk. Extract facts that help you answer the question.
+Use read_file to read the assigned chunk. Extract facts that help you answer the question.
 Return a consice summary (under 400 words) with:
 - Key course names, course numbers, number of credit hours, prerequisite course, subsequent courses, roadmaps, or requirements
 - The source URL from the chunk header
@@ -91,4 +94,19 @@ chunk_analyst_subagent = {
     "system_prompt": CHUNK_ANALYST_INSTRUCTIONS,
 }
 
-model = 
+model = init_chat_model("gemini-3.5-flash-lite", model_provider = "google_genai")
+
+agent = create_deep_agent(
+    model = model,
+    tools = [search_documentation],
+    system_prompt = RAG_WORKFLOW_INSTRUCTIONS,
+    subagents = [chunk_analyst_subagent],
+    backend = backend,
+)
+
+query = input("Enter Your Query: ")
+output = agent.invoke(
+    {"messages": [HumanMessage(content = query)]}
+    )
+
+print(output["messages"][-1].text)
