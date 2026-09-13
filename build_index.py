@@ -32,7 +32,9 @@ else:
         "https://bulletin.uga.edu/UnivInfo/content/university-info-undergrad-graduation-requirements.html",
         "https://cs.uga.edu/bachelor-science-computer-science",
         "https://doubledawgs.uga.edu/ProgramDetails/11937",
-        "https://doubledawgs.uga.edu/ProgramDetails/10080"
+        "https://doubledawgs.uga.edu/ProgramDetails/10080",
+        "https://doubledawgs.uga.edu/ProgramDetails/13962",
+        "https://doubledawgs.uga.edu/ProgramDetails/11801"
     ]
 
     #Function to remove uneccesary elements from sources' html
