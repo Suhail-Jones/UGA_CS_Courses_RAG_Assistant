@@ -29,7 +29,7 @@ def query_and_validate(question: str, expected_response: str):
 
     model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
     evaluation_results_str = model.invoke(prompt)
-    evaluation_results_str_cleaned = evaluation_results_str.strip().lower()
+    evaluation_results_str_cleaned = evaluation_results_str.content.strip().lower()
 
     print(prompt)
 
