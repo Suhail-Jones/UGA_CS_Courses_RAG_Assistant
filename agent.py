@@ -141,9 +141,8 @@ agent = create_deep_agent(
     backend = backend,
 )
 
-query = input("Enter Your Query: ")
-output = agent.invoke(
-    {"messages": [HumanMessage(content = query)]}
-    )
-
-print(output["messages"][-1].text)
+def query_rag(question: str):
+  output = agent.invoke(
+      {"messages": [HumanMessage(content = question)]}
+      )
+  return output["messages"][-1].text
