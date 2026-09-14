@@ -1,0 +1,44 @@
+category,question,expected_response,actual_response,grader_verdict,manual_judgment
+prerequisites,Is CSCI 2670 a prerequisite of CSCI 2720?,No,"Based on UGA's official course documentation for [CSCI 2720 (Data Structures)](https://csci.franklin.uga.edu/courses/content/csci-2720), **CSCI 2670 is not a prerequisite of CSCI 2720**. 
+
+The official prerequisites for CSCI 2720 are:
+* **CSCI 1302** (Software Development) AND
+* **CSCI 2610** (Discrete Mathematics for Computer Science) or **CSCI 2611** (Discrete Mathematics for Computer Science (Honors))",true,
+prerequisites,Is CSCI 2610 a prerequisite of CSCI 2670?,Yes,"Yes, **CSCI 2610** (Discrete Mathematics for Computer Science) — or its alternative, CSCI 2611 — is a prerequisite for **CSCI 2670** (Introduction to Theory of Computing). 
+
+Sources:
+- [CSCI 2670 Course Page](https://csci.franklin.uga.edu/courses/content/csci-2670)
+- [UGA Bachelor of Science in Computer Science Curriculum](https://cs.uga.edu/bachelor-science-computer-science)",true,
+prerequisites,What is the prerequisite for CSCI 4370 (Database Management)?,CSCI 2720 or CSCI 2725,"The prerequisite for **CSCI 4370 (Database Management)** is:
+
+* **CSCI 2720** (Data Structures) or **CSCI 2725** (Data Structures-Honors)
+
+***
+
+**Sources:**
+* [UGA CSCI 4370/6370 Course Information](https://csci.franklin.uga.edu/courses/content/csci-43706370)",true,
+prerequisites,What are the prerequisites for CSCI 4470 (Algorithms)?,(CSCI 2720 or CSCI 2725) and CSCI 2670,"The prerequisites for **CSCI 4470 (Algorithms)** are:
+
+* **CSCI 2720** (Data Structures) or **CSCI 2725** (Data Structures for Data Science)
+* **AND**
+* **CSCI 2670** (Introduction to Theory of Computing)
+
+*(Source: [UGA CS Course Content - CSCI 4470](https://csci.franklin.uga.edu/courses/content/csci-44706470))*",true,
+prerequisites,What are the prerequisites for CSCI 4720 (Computer Architecture and Organization)?,(CSCI 2670 or CSEE 2220) and CSCI 1730,"The prerequisites for **CSCI 4720 (Computer Architecture and Organization)** are:
+
+* **(CSCI 2670** (Introduction to Theory of Computation) or **CSEE 2220)** [1, 2]
+* **AND CSCI 1730** (Systems Programming) [1, 2]
+
+*(Note: The user's question did not ask for recursive prerequisite tracing (""all"", ""every"", ""the full chain""), so stopping at the immediate prerequisites per the instructions.)*
+
+### Sources
+* [UGA Bulletin / Course Page - CSCI 4720](https://csci.franklin.uga.edu/courses/content/csci-4720) [2]
+* [UGA Bulletin / Course Page - CSCI 4720E](https://csci.franklin.uga.edu/courses/content/csci-4720e) [1]",true,
+prerequisites,Is CSCI 1730 a prerequisite for CSCI 4720?,Yes,"Yes, **CSCI 1730** (Systems Programming) is a prerequisite (or corequisite) for **CSCI 4720** (Computer Architecture and Organization). 
+
+According to the official UGA Computer Science course information, the prerequisites for CSCI 4720 are:
+* **(CSCI 2670 or CSEE 2220) and CSCI 1730**
+
+Sources:
+* [CSCI 4720 Course Description](https://csci.franklin.uga.edu/courses/content/csci-4720)
+* [CSCI 4720E Course Description](https://csci.franklin.uga.edu/courses/content/csci-4720e)",true,
