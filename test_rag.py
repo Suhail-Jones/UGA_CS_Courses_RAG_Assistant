@@ -1,4 +1,5 @@
 import pytest
+from response_cache import cached_query_rag
 from agent import query_rag
 from langchain_google_genai import ChatGoogleGenerativeAI
 
@@ -22,7 +23,7 @@ details not present in the expected response, answer 'false'.
 """
 
 def query_and_validate(question: str, expected_response: str):
-    response_text = query_rag(question)
+    response_text = cached_query_rag(question, query_rag, force_refresh=False)
     prompt = EVAL_PROMPT.format(
         expected_response=expected_response, actual_response=response_text
     )
