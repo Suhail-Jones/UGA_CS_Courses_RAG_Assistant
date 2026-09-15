@@ -42,3 +42,103 @@ According to the official UGA Computer Science course information, the prerequis
 Sources:
 * [CSCI 4720 Course Description](https://csci.franklin.uga.edu/courses/content/csci-4720)
 * [CSCI 4720E Course Description](https://csci.franklin.uga.edu/courses/content/csci-4720e)",true,
+admission,What computer science courses must an intended CS major at UGA complete before they can be fully admitted into the major and thus no longer be 'intended'?,"CSCI 1301, CSCI 1302, CSCI 2610, and CSCI 2720","To be fully admitted into the Computer Science major at UGA and no longer be classified as an ""intended"" major, students must complete the designated entrance/Area VI prerequisite courses with a grade of **""C"" (2.0) or higher** (within their first two attempts for each course). 
+
+The specific courses required for admission include:
+
+* **CSCI 1301/1301L** – Introduction to Computing and Programming (with Lab) [1, 2, 4]
+* **CSCI 1302** – Software Development [1, 3, 4]
+* **CSCI 2610** – Discrete Mathematics for Computer Science [1, 2, 4]
+* **CSCI 2720** – Data Structures [1, 3, 4]
+* **MATH 2250** – Calculus I for Science and Engineering *(Note: While a mathematics course rather than a CS course, it is a required part of the entrance/Area VI sequence)* [1, 3, 4]
+
+***
+
+### Sources
+* [UGA Bulletin - B.S. in Computer Science Program Details](https://bulletin.uga.edu/Program/Details/73962) [1, 3, 4]
+* [UGA Computer Science Department Undergraduate Program](https://cs.uga.edu/bachelor-science-computer-science) [2]",false,
+admission,"If I've taken CSCI 1301 and 1302, what are the most logical CS courses for me to take next?",CSCI 1730 or CSCI 2610,"If you have successfully completed **CSCI 1301** (Introduction to Computing and Programming) and **CSCI 1302** (Software Development), you have completed the fundamental introductory programming sequence at UGA. 
+
+The most logical and direct next CS courses to take are:
+
+### 1. **CSCI 2720: Data Structures** (4 credit hours)
+* **Prerequisites:** **CSCI 1302** and **CSCI 2610** (Discrete Mathematics) ([Bulletin](https://bulletin.uga.edu/Program/Details/73962)).
+* **Why take it next:** Data Structures builds directly upon the programming foundation established in CSCI 1302. It is a critical core requirement for the Computer Science major and serves as a prerequisite for many upper-level 4000-level courses.
+
+### 2. **CSCI 1730: Systems Programming** (4 credit hours)
+* **Prerequisites:** **CSCI 1302** ([CSCI 1730 Course Page](https://csci.franklin.uga.edu/courses/content/csci-1730)).
+* **Why take it next:** Systems Programming teaches programming and techniques used in Unix environments (such as file I/O, process creation, and inter-process communication). Because its sole prerequisite is CSCI 1302, it is a natural parallel or follow-up course to take alongside Data Structures and unlocks critical advanced systems courses (like [CSCI 4720: Computer Architecture](https://csci.franklin.uga.edu/courses/content/csci-4720) and [CSCI 4070: Game Programming](https://csci.franklin.uga.edu/courses/content/csci-40706070)).
+
+### 3. **CSCI 2610: Discrete Mathematics for Computer Science** (4 credit hours)
+* **Why take it alongside your programming classes:** While not a programming course, CSCI 2610 is a core major requirement that is typically taken concurrently with your early 2000-level computer science courses (as it is a co-requisite or prerequisite alongside CSCI 1302 for [CSCI 2720](https://bulletin.uga.edu/Program/Details/73962)).",false,
+admission,"What grade must intended CS majors earn in CSCI 1301, CSCI 1302, CSCI 2610, and CSCI 2720 to be admitted to the major?",A grade of C (2.0) or higher,"To be admitted to the UGA Computer Science major, intended majors must earn a grade of **""C"" (2.0) or higher** in each of the following four foundation courses:
+
+* **CSCI 1301 / CSCI 1301L** (Introduction to Computing and Programming / Lab)
+* **CSCI 1302** (Software Development)
+* **CSCI 2610** (Discrete Mathematics for Computer Science)
+* **CSCI 2720** (Data Structures)
+
+Additionally, students must achieve this grade of ""C"" or higher within their **first two attempts** for each course.
+
+**Sources:**
+* [UGA Bulletin - Computer Science Major Requirements](https://bulletin.uga.edu/Program/Details/73962)",true,
+admission,Which math course is part of the Area VI entrance requirements for the CS major?,"MATH 2250 (Calculus I), which requires MATH 1113 as a prerequisite","The math course that is part of the Area VI entrance requirements for the Computer Science major at UGA is:
+
+* **MATH 2250** (Calculus I / Calculus I for Science and Engineering, 4 credit hours) [Source: [UGA Bulletin](https://bulletin.uga.edu/Program/Details/73962), [UGA CS Bachelor of Science](https://cs.uga.edu/bachelor-science-computer-science)].",false,
+admission,How many hours of CSCI 4000-level Major Elective courses must BS-CS students complete?,12 hours,"BS-CS students must complete **12 hours** of CSCI 4000-level Major Elective courses (courses not already taken to fulfill another CSCI requirement). 
+
+Additionally, as part of the major coursework and electives, students must include a teamwork-designated course (such as CSCI 4050, CSCI 4300, CSCI 4530, or CSCI 4800, which carries 4 credit hours and can overlap with major elective requirements).
+
+Sources:
+- [UGA Computer Science Degree Program](https://cs.uga.edu/bachelor-science-computer-science)
+- [UGA Bulletin BS-CS Program Details](https://bulletin.uga.edu/Program/Details/73962)",true,
+admission,What computer science courses must an intended CS major at UGA complete before they can be fully admitted into the major and thus no longer be 'intended'?,"CSCI 1301, CSCI 1302, CSCI 2610, and CSCI 2720","To be fully admitted into the Computer Science major at UGA and no longer be classified as an ""intended"" major, students must complete the designated entrance/Area VI prerequisite courses with a grade of **""C"" (2.0) or higher** (within their first two attempts for each course). 
+
+The specific courses required for admission include:
+
+* **CSCI 1301/1301L** – Introduction to Computing and Programming (with Lab) [1, 2, 4]
+* **CSCI 1302** – Software Development [1, 3, 4]
+* **CSCI 2610** – Discrete Mathematics for Computer Science [1, 2, 4]
+* **CSCI 2720** – Data Structures [1, 3, 4]
+* **MATH 2250** – Calculus I for Science and Engineering *(Note: While a mathematics course rather than a CS course, it is a required part of the entrance/Area VI sequence)* [1, 3, 4]
+
+***
+
+### Sources
+* [UGA Bulletin - B.S. in Computer Science Program Details](https://bulletin.uga.edu/Program/Details/73962) [1, 3, 4]
+* [UGA Computer Science Department Undergraduate Program](https://cs.uga.edu/bachelor-science-computer-science) [2]",false,
+admission,"If I've taken CSCI 1301 and 1302, what are the most logical CS courses for me to take next?",CSCI 1730 or CSCI 2610,"If you have successfully completed **CSCI 1301** (Introduction to Computing and Programming) and **CSCI 1302** (Software Development), you have completed the fundamental introductory programming sequence at UGA. 
+
+The most logical and direct next CS courses to take are:
+
+### 1. **CSCI 2720: Data Structures** (4 credit hours)
+* **Prerequisites:** **CSCI 1302** and **CSCI 2610** (Discrete Mathematics) ([Bulletin](https://bulletin.uga.edu/Program/Details/73962)).
+* **Why take it next:** Data Structures builds directly upon the programming foundation established in CSCI 1302. It is a critical core requirement for the Computer Science major and serves as a prerequisite for many upper-level 4000-level courses.
+
+### 2. **CSCI 1730: Systems Programming** (4 credit hours)
+* **Prerequisites:** **CSCI 1302** ([CSCI 1730 Course Page](https://csci.franklin.uga.edu/courses/content/csci-1730)).
+* **Why take it next:** Systems Programming teaches programming and techniques used in Unix environments (such as file I/O, process creation, and inter-process communication). Because its sole prerequisite is CSCI 1302, it is a natural parallel or follow-up course to take alongside Data Structures and unlocks critical advanced systems courses (like [CSCI 4720: Computer Architecture](https://csci.franklin.uga.edu/courses/content/csci-4720) and [CSCI 4070: Game Programming](https://csci.franklin.uga.edu/courses/content/csci-40706070)).
+
+### 3. **CSCI 2610: Discrete Mathematics for Computer Science** (4 credit hours)
+* **Why take it alongside your programming classes:** While not a programming course, CSCI 2610 is a core major requirement that is typically taken concurrently with your early 2000-level computer science courses (as it is a co-requisite or prerequisite alongside CSCI 1302 for [CSCI 2720](https://bulletin.uga.edu/Program/Details/73962)).",false,
+admission,"What grade must intended CS majors earn in CSCI 1301, CSCI 1302, CSCI 2610, and CSCI 2720 to be admitted to the major?",A grade of C (2.0) or higher,"To be admitted to the UGA Computer Science major, intended majors must earn a grade of **""C"" (2.0) or higher** in each of the following four foundation courses:
+
+* **CSCI 1301 / CSCI 1301L** (Introduction to Computing and Programming / Lab)
+* **CSCI 1302** (Software Development)
+* **CSCI 2610** (Discrete Mathematics for Computer Science)
+* **CSCI 2720** (Data Structures)
+
+Additionally, students must achieve this grade of ""C"" or higher within their **first two attempts** for each course.
+
+**Sources:**
+* [UGA Bulletin - Computer Science Major Requirements](https://bulletin.uga.edu/Program/Details/73962)",true,
+admission,Which math course is part of the Area VI entrance requirements for the CS major?,MATH 2250 (Calculus I),"The math course that is part of the Area VI entrance requirements for the Computer Science major at UGA is:
+
+* **MATH 2250** (Calculus I / Calculus I for Science and Engineering, 4 credit hours) [Source: [UGA Bulletin](https://bulletin.uga.edu/Program/Details/73962), [UGA CS Bachelor of Science](https://cs.uga.edu/bachelor-science-computer-science)].",true,
+admission,How many hours of CSCI 4000-level Major Elective courses must BS-CS students complete?,12 hours,"BS-CS students must complete **12 hours** of CSCI 4000-level Major Elective courses (courses not already taken to fulfill another CSCI requirement). 
+
+Additionally, as part of the major coursework and electives, students must include a teamwork-designated course (such as CSCI 4050, CSCI 4300, CSCI 4530, or CSCI 4800, which carries 4 credit hours and can overlap with major elective requirements).
+
+Sources:
+- [UGA Computer Science Degree Program](https://cs.uga.edu/bachelor-science-computer-science)
+- [UGA Bulletin BS-CS Program Details](https://bulletin.uga.edu/Program/Details/73962)",true,

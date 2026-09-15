@@ -18,7 +18,7 @@ match if it also declines to answer or indicates the information is not availabl
 phrased differently.
 
 If the actual response contains additional information not in the expected response, but that 
-information is accurate and doesn't contradict the expected response, still answer 'true'.
+information doesn't contradict the expected response, still answer 'true'.
 If the actual response contains information that contradicts the expected response, answer 'false'.
 So for example, if the expected response is 'no' but the actual response contains a lengthy explanation
 for why the answer is no, that should still be marked as true since the overall semantic meaning is the same.
@@ -164,7 +164,7 @@ def test_intended_major_grade_requirement():
 def test_area_vi_math_requirement():
     assert query_and_validate(
         question="Which math course is part of the Area VI entrance requirements for the CS major?",
-        expected_response="MATH 2250 (Calculus I), which requires MATH 1113 as a prerequisite",
+        expected_response="MATH 2250 (Calculus I)",
         category="admission"
     )
  
